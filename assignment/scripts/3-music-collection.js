@@ -10,7 +10,15 @@ function addToCollection(collection, title, artist, yearPublished){
   collection.push(album);
   return collection[collection.length-1];
 }
-
+addToCollection(myCollection, 'London Calling', 'The Clash', 1979);
+console.log(myCollection);
+addToCollection(this.myCollection, 'The Clash', 'The Clash', 1977);
+addToCollection(this.myCollection, 'Piper at the Gates of Dawn', 'Pink Floyd', 1967);
+addToCollection(this.myCollection, 'Circles', 'Mac Miller', 2020);
+addToCollection(this.myCollection, 'Dreams and Nightmares', 'Meek Mill', 2012);
+addToCollection(this.myCollection, 'Is This it', 'The Strokes', 2001);
+addToCollection(this.myCollection, 'Sgt. Peppers Lonely Hearts Club Band', 'The Beatles', 1967);
+console.log(this.myCollection);
 
 
 
