@@ -20,6 +20,12 @@ addToCollection(this.myCollection, 'Is This it', 'The Strokes', 2001);
 addToCollection(this.myCollection, 'Sgt. Peppers Lonely Hearts Club Band', 'The Beatles', 1967);
 console.log(this.myCollection);
 
+function showCollection(collection){
+  for(let album of collection){
+    console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
+  }
+}
+showCollection(this.myCollection);
 
 
 
