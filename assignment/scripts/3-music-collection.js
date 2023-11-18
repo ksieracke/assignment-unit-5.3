@@ -27,8 +27,17 @@ function showCollection(collection){
 }
 showCollection(this.myCollection);
 
-
-
+function findByArtist(collection, artist){
+  albums=[];
+  for(let i of collection){
+    if(i.artist===artist){
+      albums.push(i);
+    }
+  }
+  return albums;
+}
+console.log(findByArtist(this.myCollection, 'The Clash'));
+console.log(findByArtist(this.myCollection, 'Taylor Swift'));
 
 
 
