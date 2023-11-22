@@ -39,6 +39,33 @@ function findByArtist(collection, artist){
 console.log(findByArtist(this.myCollection, 'The Clash'));
 console.log(findByArtist(this.myCollection, 'Taylor Swift'));
 
+function search(collection, searchCriteria){
+albums=[];
+//if(searchCriteria==undefined||Object.keys(searchCriteria).length==0 || searchCriteria.artist===""){
+if(!searchCriteria||!searchCriteria.artist||!searchCriteria.yearPublished){  
+return collection;
+ }
+
+for(let i of collection){
+  if(i.artist===searchCriteria.artist && (i.yearPublished===searchCriteria.year || i.yearPublished===searchCriteria.yearPublished)){
+    albums.push(i);
+  }
+}
+return albums;
+}
+
+const test={
+  artist: 'The Beatles',
+  yearPublished: 1967
+};
+const test2={
+  artist:'The Doors'
+};
+
+console.log(search(this.myCollection, test));
+console.log(search(this.myCollection));
+console.log(search(this.myCollection, test2));
+
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
